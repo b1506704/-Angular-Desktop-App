@@ -1,0 +1,120 @@
+// Custom Theming for Angular Material
+// Import Material Icon from Google Repository
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Sharp");
+
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables.scss";
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$custom-typography: mat-typography-config(
+    $font-family: $base-font-family,
+);
+
+@include mat-core($custom-typography);
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+    color-scheme: light;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-width: 250px;
+    overflow: auto;
+    margin: $margin-none;
+    padding: $padding-none;
+    font-family: $base-font-family !important;
+    font-size: $font-size-small !important;
+    color: $colour-black !important;
+    background-color: $base-background-color;
+}
+
+* {
+    box-sizing: border-box;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    scrollbar-color: $colour-grey transparent;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $colour-grey;
+        background-clip: content-box;
+        border-radius: $radius-large;
+        border: 2px solid transparent;
+
+        &:hover {
+            background-color: $colour-lightgrey;
+        }
+    }
+}
+
+/* Rules for sizing the icon. */
+.mat-icon {
+    &.md-12 {
+        font-size: $font-size-xsmall;
+        width: 12px;
+        height: 12px;
+        line-height: 12px !important;
+    }
+
+    &.md-18 {
+        font-size: $font-size-large;
+        width: 18px;
+        height: 18px;
+        line-height: 18px !important;
+    }
+
+    &.md-21 {
+        font-size: 21px;
+        width: 21px;
+        height: 21px;
+        line-height: 21px !important;
+    }
+
+    &.md-24 {
+        font-size: 24px;
+        height: 24px;
+        line-height: 24px !important;
+        width: 24px;
+    }
+
+    &.md-30 {
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px !important;
+    }
+
+    &.md-40 {
+        font-size: 40px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px !important;
+    }
+
+    &.fa-20 {
+        font-size: $font-size-medium;
+        width: 22px;
+        height: auto;
+        text-align: center;
+    }
+}

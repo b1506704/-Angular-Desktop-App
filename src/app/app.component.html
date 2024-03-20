@@ -1,0 +1,10 @@
+<mat-progress-bar *ngIf="(progress | async) > 0" id="app-progress-bar" mode="determinate" [value]="progress | async">
+</mat-progress-bar>
+
+<app-header></app-header>
+
+<div id="app-container">
+    <app-assistant></app-assistant>
+</div>
+
+<router-outlet></router-outlet>
