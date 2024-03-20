@@ -1,0 +1,24 @@
+<div id="assist-wrapper">
+    <mat-card id="transript-container">
+        <mat-card-content>
+            {{isJoined ? transcript : msgNotJoin}}
+        </mat-card-content>
+
+        <mat-card-actions [ngSwitch]="isJoined">
+            <button *ngSwitchCase="true" mat-button color="warn" (click)="toggleSession()">Leave</button>
+            <button *ngSwitchDefault mat-raised-button color="primary" (click)="toggleSession()">Join</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card id="assist-container">
+        <mat-card-content>
+            {{isStarted ? suggest : msgNotStart}}
+        </mat-card-content>
+
+        <mat-card-actions [ngSwitch]="isStarted">
+            <button *ngSwitchCase="true" mat-button color="warn" (click)="toggleSuggestion()">Stop</button>
+            <button *ngSwitchDefault mat-raised-button color="primary" (click)="toggleSuggestion()"
+                [disabled]="!isJoined">Start</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

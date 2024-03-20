@@ -1,0 +1,109 @@
+﻿.inline-flex-row {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+}
+
+.inline-flex-column {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+%display-flex {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+%flex-row {
+    @extend %display-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+%flex-row-reverse {
+    @extend %display-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+%flex-column {
+    @extend %display-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+%flex-column-reverse {
+    @extend %display-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+%flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex {
+    @extend %display-flex;
+}
+
+.flex-column {
+    @extend %flex-column;
+}
+
+.flex-row {
+    @extend %flex-row;
+}
+
+.flex-column-reverse {
+    @extend %flex-column-reverse;
+}
+
+.flex-row-reverse {
+    @extend %flex-row-reverse;
+}
+
+.flex-wrap {
+    @extend %flex-wrap;
+}
+
+/* Shorthand for flex-grow flex-shrink flex-basis*/
+.flex-fullpage {
+    -webkit-box-flex: 1 1 0;
+    -ms-flex: 1 1 0px;
+    -webkit-flex: 1 1 0px;
+    flex: 1 1 0px;
+}
+
+.flex-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
