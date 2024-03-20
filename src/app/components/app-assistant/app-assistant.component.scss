@@ -25,12 +25,13 @@
 
         > mat-card-actions {
             @extend .flex-row;
-            align-items: center;
-            justify-content: flex-end;
+            @extend .flex-center;
             gap: 10px;
 
             > button {
                 margin: $margin-none;
+                flex: 1 1 100%;
+                max-width: 100%;
             }
         }
         

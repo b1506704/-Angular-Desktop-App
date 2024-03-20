@@ -10,7 +10,14 @@ import { HttpService } from '../../services/http.service';
 })
 export class AppAssistantComponent implements OnInit {
     public data = '';
-    public response = 'Response';
+    public transcript = 'Transcription';
+    public suggest = 'Suggestion';
+    public msgNotJoin = `You haven't started any session yet. Please join one`;
+    public msgNotStart = 'Please click Start to listen to audio output and request live suggestions from OpenAI';
+
+    public isJoined = false;
+    public isStarted = false;
+
 
     constructor(
         private httpService: HttpService
@@ -19,15 +26,14 @@ export class AppAssistantComponent implements OnInit {
     ngOnInit() {
     }
 
-    public onKeyDown(e: KeyboardEvent) {
-        if (e && e.key === 'Enter') {
-            this.onSearch();
-        }
+    public toggleSession() {
+        this.isJoined = !this.isJoined;
+        this.isStarted = false;
+        this.transcript = 'Transcription';
     }
 
-    public onSearch() {
-        this.httpService.verify(this.data).subscribe(res => {
-            this.response = res.suggestion;
-        });
+    public toggleSuggestion() {
+        this.isStarted = !this.isStarted;
+        this.suggest = 'Suggestion';
     }
 }
