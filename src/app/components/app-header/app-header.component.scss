@@ -13,22 +13,7 @@
             line-height: 24px;
             flex: 1 1 100%;
             max-width: 100%;
-        }
-
-        #user-fullname-content {
-            line-height: 24px;
-            font-size: $font-size-medium;
-            text-align: left;
-        }
-
-        @media screen and (max-width: 959px) {
-            #logo-content {
-                text-align: center;
-            }
-            
-            #user-fullname-content {
-                display: none;
-            }
-        }
+            text-align: center;
+        }     
     }
 }

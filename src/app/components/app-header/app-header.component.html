@@ -1,32 +1,7 @@
 <mat-toolbar id="header-wrapper" color="primary">
     <mat-toolbar-row id="header-container">
-        <button mat-icon-button id="btn-menu" name="btn-menu">
-            <mat-icon id="icon-menu" class="material-icons-round md-30">menu</mat-icon>
-        </button>
-
         <div id="logo-content">
-            Webstercare AI
+            Customer Interview Assistant
         </div>
-
-        <div id="user-fullname-content">
-            {{fullName}}
-        </div>
-
-        <button mat-icon-button [matMenuTriggerFor]="userMenu" id="btn-account" name="btn-account">
-            <mat-icon id="icon-account" class="material-icons-round md-30">account_circle</mat-icon>
-        </button>
     </mat-toolbar-row>
 </mat-toolbar>
-
-<mat-menu #userMenu="matMenu">
-    <button mat-menu-item id="btn-detail" name="btn-detail" title="My Details">
-        <mat-icon id="icon-user-detail" class="material-icons-roun md-21">badge</mat-icon>
-        <span class="btn-text">My Details</span>
-    </button>
-
-    <button mat-menu-item id="btn-logout" name="btn-logout" title="Log Out" [disabled]="isLogoutDisabled"
-        (click)="logout()">
-        <mat-icon id="icon-logout" class="material-icons-round md-21">logout</mat-icon>
-        <span class="btn-text">Log Out</span>
-    </button>
-</mat-menu>
