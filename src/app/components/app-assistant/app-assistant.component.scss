@@ -21,6 +21,7 @@
         > mat-card-content {
             height: calc(100% - 44px);
             overflow-y: auto;
+            white-space: pre-wrap;
         }
 
         > mat-card-actions {

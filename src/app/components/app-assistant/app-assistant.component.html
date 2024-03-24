@@ -1,7 +1,7 @@
 <div id="assist-wrapper">
-    <mat-card id="transript-container">
+    <mat-card id="transcript-container">
         <mat-card-content>
-            {{isJoined ? transcript : msgNotJoin}}
+            {{isJoined ? transcription : msgNotJoin}}
         </mat-card-content>
 
         <mat-card-actions [ngSwitch]="isJoined">
@@ -12,7 +12,7 @@
 
     <mat-card id="assist-container">
         <mat-card-content>
-            {{isStarted ? suggest : msgNotStart}}
+            {{isStarted ? suggestion : msgNotStart}}
         </mat-card-content>
 
         <mat-card-actions [ngSwitch]="isStarted">

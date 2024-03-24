@@ -1,29 +1,20 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { MatButtonModule, MatCard, MatCardModule, MatIconModule, MatInputModule, MatMenuModule, MatProgressBarModule, MatToolbarModule} from '@angular/material';
+import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
 
 
 @NgModule({
     declarations: [
     ],
     imports: [
-        MatButtonModule,
-        MatIconModule,
-        MatMenuModule,
         MatToolbarModule,
-        MatInputModule,
-        MatCardModule,
-        MatProgressBarModule
+        MatCardModule, 
+        MatButtonModule
     ],
-    providers: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     exports: [
-        MatButtonModule,
-        MatIconModule,
-        MatMenuModule,
         MatToolbarModule,
-        MatInputModule,
         MatCardModule,
-        MatProgressBarModule
+        MatButtonModule
     ]
 })
 export class SharedModule { }

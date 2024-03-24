@@ -1,16 +1,5 @@
 @import "../assets/scss/variables.scss";
 
-#app-progress-bar {
-    z-index: 99999;
-    height: 2px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    left: 0;
-    padding: $padding-none;
-    margin: $margin-none;
-}
-
 #app-container {
     padding: $padding-large;
     height: calc(100% - 64px);
