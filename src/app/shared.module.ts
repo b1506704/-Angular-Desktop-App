@@ -7,7 +7,7 @@ import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/mater
     ],
     imports: [
         MatToolbarModule,
-        MatCardModule, 
+        MatCardModule,
         MatButtonModule
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],

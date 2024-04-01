@@ -2,12 +2,14 @@
 
 #header-wrapper {
     padding: $padding-none $padding-large;
+    min-height: 56px;
 
     #header-container {
         justify-content: flex-start;
         align-items: center;
         padding: $padding-none;
         gap: 10px;
+        height: 56px;
 
         #logo-content {
             line-height: 24px;
