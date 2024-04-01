@@ -1,23 +1,27 @@
 <div id="assist-wrapper">
-    <mat-card id="transcript-container">
-        <mat-card-content>
+    <mat-card id="transcript-container" class="assist-container">
+        <mat-card-title id="transcript-header"  class="item-header"> Transcription </mat-card-title>
+
+        <mat-card-content id="transciprt-content" class="item-content">
             {{isJoined ? transcription : msgNotJoin}}
         </mat-card-content>
 
-        <mat-card-actions [ngSwitch]="isJoined">
-            <button *ngSwitchCase="true" mat-button color="warn" (click)="toggleSession()">Leave</button>
-            <button *ngSwitchDefault mat-raised-button color="primary" (click)="toggleSession()">Join</button>
+        <mat-card-actions id="transcript-footer" class="item-footer" [ngSwitch]="isJoined">
+            <button *ngSwitchCase="true" mat-button color="warn" (click)="leaveSession()">Leave</button>
+            <button *ngSwitchDefault mat-raised-button color="primary" (click)="joinSession()">Join</button>
         </mat-card-actions>
     </mat-card>
 
-    <mat-card id="assist-container">
-        <mat-card-content>
+    <mat-card id="suggest-container" class="assist-container">
+        <mat-card-title id="suggest-header" class="item-header"> Suggestion </mat-card-title>
+
+        <mat-card-content id="suggest-content" class="item-content">
             {{isStarted ? suggestion : msgNotStart}}
         </mat-card-content>
 
-        <mat-card-actions [ngSwitch]="isStarted">
-            <button *ngSwitchCase="true" mat-button color="warn" (click)="toggleSuggestion()">Stop</button>
-            <button *ngSwitchDefault mat-raised-button color="primary" (click)="toggleSuggestion()"
+        <mat-card-actions id="suggest-footer" class="item-footer" [ngSwitch]="isStarted">
+            <button *ngSwitchCase="true" mat-button color="warn" (click)="stopAssistant()">Stop</button>
+            <button *ngSwitchDefault mat-raised-button color="primary" (click)="startAssistant()"
                 [disabled]="!isJoined">Start</button>
         </mat-card-actions>
     </mat-card>
